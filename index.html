@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Food Delivery Time Predictor</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#ff6a00,#ee0979);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:0;
+}
+
+.container{
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+width:350px;
+}
+
+h2{
+text-align:center;
+margin-bottom:25px;
+color:#333;
+}
+
+label{
+font-weight:bold;
+font-size:14px;
+}
+
+input,select{
+width:100%;
+padding:10px;
+margin-top:5px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:14px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#ff4b2b;
+border:none;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#ff416c;
+}
+
+.footer{
+text-align:center;
+margin-top:15px;
+font-size:12px;
+color:#777;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>🚚 Delivery Time Predictor</h2>
+
+<form action="/predict" method="post">
+
+<label>Delivery Person Age</label>
+<input type="number" name="age" required>
+
+<label>Delivery Rating</label>
+<input type="number" step="0.1" name="rating" required>
+
+<label>Distance (km)</label>
+<input type="number" step="0.1" name="distance" required>
+
+<label>Order Type</label>
+<select name="order">
+<option value="0">Snack</option>
+<option value="1">Drinks</option>
+<option value="2">Buffet</option>
+</select>
+
+<label>Vehicle Type</label>
+<select name="vehicle">
+<option value="0">Motorcycle</option>
+<option value="1">Scooter</option>
+</select>
+
+<button type="submit">Predict Delivery Time</button>
+
+</form>
+
+<div class="footer">
+ML Powered Delivery Estimator
+</div>
+
+</div>
+
+</body>
+</html>

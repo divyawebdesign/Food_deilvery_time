@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Prediction Result</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:linear-gradient(135deg,#11998e,#38ef7d);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:0;
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h2{
+color:#333;
+}
+
+.time{
+font-size:40px;
+font-weight:bold;
+color:#11998e;
+margin:20px 0;
+}
+
+a{
+text-decoration:none;
+background:#11998e;
+color:white;
+padding:10px 20px;
+border-radius:6px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>Estimated Delivery Time</h2>
+
+<div class="time">
+{{prediction}} minutes
+</div>
+
+<a href="/">Predict Again</a>
+
+</div>
+
+</body>
+
+</html>
